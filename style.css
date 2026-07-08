@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    transition:0.3s;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    width:100%;
+    height:70px;
+    background:#111;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 30px;
+    border-bottom:1px solid #333;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.nav-logo h2{
+    color:white;
+}
+
+.nav-search input{
+    width:350px;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#262626;
+    color:white;
+    outline:none;
+}
+
+.nav-icons span{
+    font-size:24px;
+    margin-left:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-icons span:hover{
+    transform:scale(1.2);
+    color:#0095f6;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    display:flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:250px;
+    min-height:100vh;
+    border-right:1px solid #333;
+    padding:20px;
+    position:sticky;
+    top:70px;
+}
+
+.logo{
+    margin-bottom:30px;
+}
+
+.search-box{
+    margin-bottom:30px;
+}
+
+.search-box input{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    background:#262626;
+    color:white;
+    outline:none;
+}
+
+.search-box input::placeholder{
+    color:#999;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:15px 0;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.sidebar ul li:hover{
+    color:#0095f6;
+}
+
+.sidebar li i{
+    width:30px;
+    font-size:20px;
+}
+
+/* ================= FEED ================= */
+
+.feed{
+    flex:1;
+    padding:20px;
+}
+
+.feed h2{
+    margin-bottom:20px;
+}
+
+/* ================= STORIES ================= */
+
+.story-section{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    padding:20px 0;
+}
+
+.story-section::-webkit-scrollbar{
+    display:none;
+}
+
+.story{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-width:90px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.story:hover{
+    transform:scale(1.08);
+}
+
+.story img{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    padding:3px;
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    object-fit:cover;
+}
+
+.story p{
+    margin-top:8px;
+    font-size:13px;
+}
+
+/* ================= POST ================= */
+
+.post{
+    width:500px;
+    margin:30px auto;
+    background:#111;
+    border:1px solid #333;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+.post-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:15px;
+}
+
+.profile{
+    width:40px;
+    height:40px;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.post-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.post-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+}
+
+.post-icons{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:15px;
+    font-size:24px;
+}
+
+.post-icons span{
+    cursor:pointer;
+    transition:.3s;
+}
+
+.post-icons span:hover{
+    transform:scale(1.2);
+}
+
+.save{
+    margin-left:auto;
+}
+
+.post p{
+    padding:0 15px 15px;
+}
+
+/* ================= COMMENT ================= */
+
+.comment-input{
+    width:80%;
+    margin:10px;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+}
+
+.comment-btn{
+    padding:10px 15px;
+    border:none;
+    border-radius:5px;
+    background:#0095f6;
+    color:#fff;
+    cursor:pointer;
+}
+
+.comment-btn:hover{
+    background:#1877f2;
+}
+
+.comments{
+    padding:10px;
+}
+
+.comments p{
+    margin:5px 0;
+}
+
+/* ================= HEART ANIMATION ================= */
+
+.heart{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    font-size:90px;
+    opacity:0;
+    pointer-events:none;
+    transition:.3s;
+}
+
+.heart.show{
+    transform:translate(-50%,-50%) scale(1);
+    opacity:1;
+}
+
+/* ================= SHARE ================= */
+
+.share-icon{
+    cursor:pointer;
+}
+
+.share-icon:hover{
+    color:#0095f6;
+}
+
+/* ================= RIGHT SIDEBAR ================= */
+
+.right-sidebar{
+    width:280px;
+    border-left:1px solid #333;
+    padding:20px;
+}
+
+.right-sidebar h3{
+    margin-bottom:20px;
+}
+
+.right-sidebar p{
+    margin:15px 0;
+    cursor:pointer;
+}
+
+.right-sidebar p:hover{
+    color:#0095f6;
+}
+
+/* ================= LIGHT MODE ================= */
+
+.light-mode{
+    background:#fff;
+    color:#000;
+}
+
+.light-mode .navbar{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
+
+.light-mode .nav-logo h2{
+    color:#000;
+}
+
+.light-mode .sidebar{
+    border-right:1px solid #ddd;
+}
+
+.light-mode .right-sidebar{
+    border-left:1px solid #ddd;
+}
+
+.light-mode .post{
+    background:#fff;
+    color:#000;
+    border:1px solid #ddd;
+}
+
+.light-mode .search-box input,
+.light-mode .nav-search input{
+    background:#f2f2f2;
+    color:#000;
+}
+
+.light-mode .comment-input{
+    background:#f5f5f5;
+    color:#000;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.sidebar{
+    display:none;
+}
+
+.right-sidebar{
+    display:none;
+}
+
+.feed{
+    width:100%;
+    padding:10px;
+}
+
+.post{
+    width:100%;
+}
+
+.nav-search input{
+    width:150px;
+}
+
+.navbar{
+    padding:0 15px;
+}
+
+.nav-icons span{
+    margin-left:10px;
+}
+
+}
